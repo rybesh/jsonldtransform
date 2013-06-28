@@ -1,6 +1,6 @@
 ## jsonldtransform
 
-A streaming [JSON-JD](http://json-ld.org/) parser for Node.js, implemented as a [Transform](http://nodejs.org/api/stream.html#stream_class_stream_transform) stream.
+A streaming [JSON-LD](http://json-ld.org/) parser for Node.js, implemented as a [Transform](http://nodejs.org/api/stream.html#stream_class_stream_transform) stream.
 
 ## example
 
