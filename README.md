@@ -34,7 +34,7 @@ npm install jsonldtransform
 ## test
 
 ```Shell
-npm test
+npm test jsonldtransform
 ```
 
 ## license
