@@ -1,0 +1,22 @@
+{ "name": "jsonldtransform"
+, "version": "0.0.1"
+, "author": "Ryan Shaw <ryanshaw@unc.edu>"
+, "description": "streaming JSON-JD parser"
+, "scripts": 
+  { "test": "./node_modules/nodeunit/bin/nodeunit test" }
+, "repository": 
+  { "type": "git"
+  , "url": "https://github.com/editorsnotes/jsonldtransform.git"
+  }
+, "keywords": 
+  [ "json-ld"
+  , "streaming"
+  , "parser"
+  ]
+, "dependencies": 
+  { "clarinet"     : "0.7.x" }
+, "devDependencies": 
+  { "nodeunit"      : "0.8.x" }
+, "license": "MIT"
+, "engines": { "node": ">=0.10" }
+}
