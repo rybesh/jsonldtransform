@@ -25,8 +25,6 @@ module.exports =
         if (self.expecting.length == 0) self.test.done()
       }
       self.check._write = function(o, ignore, callback) {
-        //if ('@id' in o) console.log(o['@id'])
-        //else console.log(o)
         checknext(o)
         callback()
       }
