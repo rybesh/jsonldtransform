@@ -281,7 +281,10 @@ module.exports =
           }
         , 'graph'
         , { '@id': '/_graphs/test-graph-1'
-          , '@graph': ['/topicnode/666','http://www.wikidata.org/wiki/Q4115712']
+          , '@graph': 
+              [ { '@id': '/topicnode/666' }
+              , { '@id': 'http://www.wikidata.org/wiki/Q4115712' }
+              ]
           }
         , 'finish' // done writing
         , 'end'    // done reading
@@ -307,8 +310,8 @@ module.exports =
           }
         , 'graph'
         , { '@graph': 
-            [ 'http://manu.sporny.org/i/public'
-            , 'http://greggkellogg.net/foaf#me'
+            [ { '@id': 'http://manu.sporny.org/i/public' }
+            , { '@id': 'http://greggkellogg.net/foaf#me' }
             ]
           }
         , 'finish' // done writing
@@ -463,16 +466,16 @@ module.exports =
           , start: 0
           , limit: 10
           , docs: 
-              [ 'http://dp.la/api/items/a1c79d745f188db2bd9ffba25e235801'
-              , 'http://dp.la/api/items/5d4aa522af31e52646af5272832b146a'
-              , 'http://dp.la/api/items/639447d924a14201a0a4135750c7a004'
-              , 'http://dp.la/api/items/05c16920e24e28a11e189dc4106687ca'
-              , 'http://dp.la/api/items/1b08d3f45792e4c74b347b10ef4576f0'
-              , 'http://dp.la/api/items/a96158899d34d6d1a1dc46041fcf00f5'
-              , 'http://dp.la/api/items/736761748c1b25df7a681a6aaeed3480'
-              , 'http://dp.la/api/items/c9328573ae646bb5d32c55ba88eadc14'
-              , 'http://dp.la/api/items/08e7a509672ef137c786d1b05b596581'
-              , 'http://dp.la/api/items/c4ea019a0108e5b5aae4d92dcc8520bd' 
+              [ { '@id': 'http://dp.la/api/items/a1c79d745f188db2bd9ffba25e235801' }
+              , { '@id': 'http://dp.la/api/items/5d4aa522af31e52646af5272832b146a' }
+              , { '@id': 'http://dp.la/api/items/639447d924a14201a0a4135750c7a004' }
+              , { '@id': 'http://dp.la/api/items/05c16920e24e28a11e189dc4106687ca' }
+              , { '@id': 'http://dp.la/api/items/1b08d3f45792e4c74b347b10ef4576f0' }
+              , { '@id': 'http://dp.la/api/items/a96158899d34d6d1a1dc46041fcf00f5' }
+              , { '@id': 'http://dp.la/api/items/736761748c1b25df7a681a6aaeed3480' }
+              , { '@id': 'http://dp.la/api/items/c9328573ae646bb5d32c55ba88eadc14' }
+              , { '@id': 'http://dp.la/api/items/08e7a509672ef137c786d1b05b596581' }
+              , { '@id': 'http://dp.la/api/items/c4ea019a0108e5b5aae4d92dcc8520bd' }
               ]
           , facets: [] 
           }
