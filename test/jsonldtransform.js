@@ -114,7 +114,8 @@ module.exports =
         , 'http://json-ld.org/contexts/person.jsonld'
         , '' // whole document scope
         , 'readable'
-        , { "name": "Manu Sporny"
+        , { "@context": "http://json-ld.org/contexts/person.jsonld" 
+          , "name": "Manu Sporny"
           , "homepage": "http://manu.sporny.org/" 
           , "image": "http://manu.sporny.org/images/manu.png"
           }
@@ -159,7 +160,8 @@ module.exports =
         , 'http://example.org/contexts/person.jsonld'
         , '/0' // scope
         , 'readable'
-        , { "name": "Manu Sporny"
+        , { "@context": "http://example.org/contexts/person.jsonld"
+          , "name": "Manu Sporny"
           , "homepage": "http://manu.sporny.org/" 
           , "depiction": "http://twitter.com/account/profile_image/manusporny"
           }
@@ -167,7 +169,8 @@ module.exports =
         , 'http://example.org/contexts/place.jsonld'
         , '/1' // scope
         , 'readable'
-        , { "name": "The Empire State Building"
+        , { "@context": "http://example.org/contexts/place.jsonld"
+          , "name": "The Empire State Building"
           , "description": "The Empire State Building is a 102-story landmark in New York City." 
           , "geo": { "latitude": "40.75", "longitude": "73.98" }
           }
@@ -317,6 +320,7 @@ module.exports =
           }
         , 'graph'
         , { '@id': '/_graphs/test-graph-2'
+          , '@context': 'http://example.org/some-context.jsonld'
           , '@graph': 
               [ { '@id': '/topicnode/666' }
               , { '@id': 'http://www.wikidata.org/wiki/Q4115712' }
