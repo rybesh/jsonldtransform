@@ -1,6 +1,6 @@
 { "name": "jsonldtransform"
 , "main": "./lib/jsonldtransform.js"
-, "version": "0.0.1"
+, "version": "0.0.2"
 , "author": "Ryan Shaw <ryanshaw@unc.edu>"
 , "description": "streaming JSON-JD parser"
 , "scripts": 
