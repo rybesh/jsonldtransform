@@ -293,6 +293,43 @@ module.exports =
         .pipe(this.transform).pipe(this.check)
     }
 //------------------------------------------------------------------------------
+  , 'named graph with referenced context': function(test) {
+      this.expect(test,
+        [ 'pipe'
+        , 'context'
+        , 'http://example.org/some-context.jsonld'
+        , '' // whole document scope
+        , 'readable'
+        , { '@id': '/topicnode/666'
+          , '@type': 'person'
+          , 'label': 'Emma Goldman'
+          , 'place of birth': 'http://www.wikidata.org/wiki/Q4115712' 
+          }
+        , 'readable'
+        , { '@id': 'http://www.wikidata.org/wiki/Q4115712'
+          , '@type': 'location'
+          , 'label': 'Kaunas' 
+          , "country": "http://www.wikidata.org/wiki/Q37"
+          }
+        , 'readable'
+        , { "@id": "http://www.wikidata.org/wiki/Q37"
+          , "label": "Lithuania"
+          }
+        , 'graph'
+        , { '@id': '/_graphs/test-graph-2'
+          , '@graph': 
+              [ { '@id': '/topicnode/666' }
+              , { '@id': 'http://www.wikidata.org/wiki/Q4115712' }
+              , { '@id': 'http://www.wikidata.org/wiki/Q37' }
+              ]
+          }
+        , 'finish' // done writing
+        , 'end'    // done reading
+        ])
+      fs.createReadStream('test/data/named_graph_with_ref_context.json')
+        .pipe(this.transform).pipe(this.check)
+    }
+//------------------------------------------------------------------------------
   , 'default graph': function(test) {
       this.expect(test,
         [ 'pipe'
